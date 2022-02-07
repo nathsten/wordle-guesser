@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle guesser</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        li{
+            position: relative;
+            left: 10%;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <div>
+        <h1 class="text-white text-4xl text-center my-5">Wordle Guesser</h1>
+    </div>
+
+
+
+    <div class="text-center">
+        <h1 class="text-2xl my-2 text-white">Type in known letters</h1>
+        <input type="text" class="possition w-14 h-14 bg-transparent border border-white rounded-md uppercase text-center text-white text-2xl outline-none" placeholder="X">
+        <input type="text" class="possition w-14 h-14 bg-transparent border border-white rounded-md uppercase text-center text-white text-2xl outline-none" placeholder="X">
+        <input type="text" class="possition w-14 h-14 bg-transparent border border-white rounded-md uppercase text-center text-white text-2xl outline-none" placeholder="X">
+        <input type="text" class="possition w-14 h-14 bg-transparent border border-white rounded-md uppercase text-center text-white text-2xl outline-none" placeholder="X">
+        <input type="text" class="possition w-14 h-14 bg-transparent border border-white rounded-md uppercase text-center text-white text-2xl outline-none" placeholder="X">
+
+    </div>
+
+    <div class=" text-center mt-5">
+        <h1 class="text-white text-2xl my-2">Type in letters which must include.</h1>
+        <input type="text" name="" id="include" class="w-4/5 bg-transparent border border-white rounded-md uppercase text-center text-white text-2xl outline-none" placeholder="abcd">
+
+        <h1 class="text-white text-2xl my-2">Type in letters which does not include.</h1>
+        <input type="text" name="" id="NOTinclude" class="w-4/5 bg-transparent border border-white rounded-md uppercase text-center text-white text-2xl outline-none" placeholder="efgh">
+    </div>
+
+    <hr class="my-5 text-white">
+ 
+    <div id="output" class="text-center mt-5">
+        <h1 class="text-white text-2xl my-2">Suggested words: </h1>
+
+        <ul>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">AEROS</li>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">AESIR</li>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">ARISE</li>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">AROSE</li>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">LARES</li>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">RAISE</li>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">REAIS</li>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">SERAI</li>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">SOARE</li>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">TARES</li>
+            <li class="bg-blue-300 py-2 rounded md my-2 text-gray-900 text-xl w-4/5">TORES</li>
+        </ul>
+    </div>
+    
+    <script type="module">
+        import main from './app.js';
+        main();
+    </script>
+</body>
+</html>
