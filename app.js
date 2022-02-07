@@ -55,10 +55,8 @@ possition.map(e => e.addEventListener("input", () => {
 }));
 
 const main = async () => {
-    const getWords = await fetch('https://raw.githubusercontent.com/charlesreid1/five-letter-words/master/sgb-words.txt');
+    const getWords = await fetch('./allwords.txt');
     allWords = await (await getWords.text()).split(/\n/);
-     
-    console.log(allWords);
 }
 
 export default main;
